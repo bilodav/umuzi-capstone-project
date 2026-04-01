@@ -235,6 +235,7 @@ p {
  }
 
  nav ul a{
+    display: inline-block;
     color: var(--color-accent-dark);
     border-radius: 15px;
     transition: all 250ms ease-in-out;
@@ -249,6 +250,14 @@ p {
     color: var(--color-white);
     background-color: var(--color-surface-alt);
  }
+
+ nav ul a:active{
+    box-shadow: inset -3px -3px 4px rgba(26, 35, 50, 0.181), 
+                inset 2px 3px 4px rgba(26, 35, 50, 0.508);
+    transform: translate(1px, 1.5px) scale(0.95);
+    transition: transform 20ms ease-out, box-shadow 20ms ease-out;
+}
+
 
 
 
@@ -756,7 +765,6 @@ form{
     min-width: 40%;
     max-width: 90%;
     height: 95%;
-    /* margin: 20px auto; */
     border-radius: 30px;
     box-shadow: var(--glass-shadow);
     align-self: center;
@@ -827,7 +835,6 @@ input:focus, textarea:focus, select:focus{
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: all var(--transition-base);
   box-shadow: 6px 6px 12px rgba(26, 35, 50, 0.15), 
               -6px -6px 12px rgba(255, 255, 255, 0.7);
   width: 100%;
@@ -838,6 +845,14 @@ input:focus, textarea:focus, select:focus{
 .contact button:hover{
     background-position: left;
     transform: scaleY(1.1);
+}
+
+.contact button:active{
+    box-shadow: inset -4px -4px 8px rgba(26, 35, 50, 0.06), 
+                inset 4px 4px 8px rgba(26, 35, 50, 0.595);
+    transform: translate(1px, 1.5px) scale(0.98);
+    transition: all 20ms ease-out;
+    background-position: left;
 }
 
 .required-mark{
@@ -863,11 +878,39 @@ address li {
     transition: all 200ms ease-in-out;
 }
 
+address li span {
+    padding-right: 5px;
+}
+
+address li svg {
+    width: 30px;
+    vertical-align: middle;
+    transition: all 200ms ease-in-out;
+
+}
+
 address li:not(:first-of-type){
     margin-top: 30px;
 }
 
 address li:hover{
+    background-position: left;
+    box-shadow: inset -4px -4px 8px rgba(26, 35, 50, 0.06), 
+                inset 4px 4px 8px rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+address li:hover svg{
+    fill: var(--color-accent);
+}
+
+address li:active{
+    
+    fill: var(--color-accent-dark);
+    box-shadow: inset -4px -4px 8px rgba(26, 35, 50, 0.068), 
+                inset 4px 4px 8px rgba(26, 35, 50, 0.259);
+    transform: translate(1px, 1.5px) scale(0.98);
+    transition: all 10ms ease-out;
     background-position: left;
 }
 
@@ -879,6 +922,14 @@ address li a {
     padding: 15px 10px;
     text-align: center;
 }
+
+address li a[href*="raphael.davids"] {
+    font-size: 0.8rem;
+    word-break: break-all;
+}
+/* Added word-break: break-all so that the email can wrap inside the <li> element as the screen resizes */
+
+
 
 }
 

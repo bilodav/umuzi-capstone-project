@@ -4,7 +4,7 @@ This is a four-page portfolio website template built for the Umuzi Capstone Proj
 
 The project began from an incomplete, error-filled starter codebase and was rebuilt into a fully functional, accessible, responsive, and professionally styled website.
 
-**You can visit the Live URL here:** [https://bilodav.github.io/Oakbeam](https://bilodav.github.io/umuzi-capstone-project)
+**You can visit the Live URL here:** [https://bilodav.github.io/umuzi-capstone-project](https://bilodav.github.io/umuzi-capstone-project)
 
 ## What's Included
 
