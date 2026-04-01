@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Website portfolio template - Get in touch with Raphael Davids for any web development and design"
+    />
+    <meta name="author" content="Raphael Davids" />
+
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="Raphael Davids | Contact" />
+    <meta
+      property="og:description"
+      content="Contact Raphael Davids for your next project."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Title and style links -->
+    <title>Contact | Raphael Davids</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- These divs are used only for background animation styling of orbs, only three are used to keep inline with the assignment requirements  -->
+    <div class="orb-container" aria-hidden="true">
+      <div class="orb" aria-hidden="true"></div>
+      <div class="orb" aria-hidden="true"></div>
+      <div class="orb" aria-hidden="true"></div>
+    </div>
+
+    <header>
+      <nav aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <!-- prettier-ignore -->
+          <li>
+            <a href="./contact.html" class="active" aria-current="page">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <h1>Contact Me</h1>
+    </header>
+    <main>
+      <section class="contact glass">
+        <h2>Get In Touch</h2>
+
+        <form action="#" method="get">
+          <!-- * required mark hidden for screen readers -->
+          <label for="name">
+            Name: <span aria-hidden="true" class="required-mark">*</span>
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="John Doe"
+            required
+            aria-required="true"
+            minlength="2"
+          />
+
+          <label for="email">
+            Email: <span aria-hidden="true" class="required-mark">*</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email@email.com"
+            required
+            aria-required="true"
+          />
+
+          <label for="phone"> Phone: </label>
+          <input
+            name="phone"
+            type="tel"
+            id="phone"
+            placeholder="+27 82 000 000"
+          />
+
+          <label for="project-type">
+            Project type:
+            <span aria-hidden="true" class="required-mark">*</span>
+          </label>
+          <select
+            id="project-type"
+            name="project-type"
+            required
+            aria-required="true"
+          >
+            <option value="" disabled selected>Query Type</option>
+            <option value="new website">New Website</option>
+            <option value="web maintenance">Web Maintenance</option>
+            <option value="web changes">Web Changes</option>
+            <option value="web app">Web Application</option>
+            <option value="e-commerce">e-commerce</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="message"> Message: </label>
+          <textarea
+            placeholder="Add any additional info here"
+            id="message"
+            name="message"
+          >
+          </textarea>
+          <button type="submit">Send</button>
+        </form>
+
+        <img
+          src="./images/contact.jpg"
+          alt="Animated mythical creatures answering a glowing phone at a computer"
+        />
+
+        <h2>Or reach me directly</h2>
+        <address>
+          <ul>
+            <li>
+              <a href="tel:+27603765429">Call me on 060 376 5429</a>
+            </li>
+            <li>
+              <!-- Prettier ignore -->
+              <a href="mailto:raphael.davids@umuzi.org">
+                Email me at raphael.davids@umuzi.org
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/27603765429">Click here to WhatsApp Me</a>
+            </li>
+            <li>
+              <!-- Prettier ignore -->
+              <a href="https://linkedin.com/in/bilodavids">
+                View my LinkedIn Profile
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/bilodav">View my Github</a>
+            </li>
+          </ul>
+        </address>
+      </section>
+    </main>
+    <footer>
+      <p>Raphael Davids &copy; 2026 - Umuzi Capstone Project</p>
+      <!-- Prettier ignore -->
+      <a href="mailto:raphael.davids@umuzi.org">
+        Contact me at raphael.davids@umuzi.org
+      </a>
+      <img src="./images/signature.png" alt="A signature of Raphael Davids" />
+    </footer>
+  </body>
+</html>

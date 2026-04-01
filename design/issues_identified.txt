@@ -1,0 +1,71 @@
+THESE ARE THE ISSUES I IDENTIFIED IN THE STARTER CODE
+Portfolio Website 
+Raphael Davids | Umuzi Capstone Project
+=====================================================
+
+GENERAL ( Affects all 4 HTML files)
+------------------------------------
+1. Missing lang="en" on <html> - Screen readers cannot detect language.
+2. Missig <meta charset="UTF-8> - Character coding is undefined if not applied.
+3. Missing <meta name="viewport"> - The site will not be responsive on mobile.
+4. Missing <meta name="description> - No SEO page description.
+5. No CSS files exists in the repository leaving the pages completely unstyled.
+6. All the structural elements of the HTML use <div> instead of semantic HTML elements.
+7. There is no navigation bar.
+8. There are no aria-label, aria-current, or role attributes anywhere.
+9. Footer is unstyled.
+10. There are no Open Graph tags for social sharing.
+
+
+INDEX.HTML
+-----------
+11. <img> element is missing the alt attribute.
+12. The two <div> elements with class .hero and .intro should be <section> elements.
+
+ABOUT.HTML
+-----------
+14. Skills table is missing entirely.
+15. <img> element is missing the alt attribute.
+16. <h3> element is not using the correct heirarchy as there is no <h2> heading above it.
+17. Background section use a <div> instead of a <section> element.
+18. No page <title> to differentiate the page meaningfully.
+
+PROJECTS.HTML
+--------------
+19. Project 3 missing entirely. 
+20. <img> element with the src "project1.jpg" is missing an alt attribute.
+21. <img> element with the src "project2.jpg" is missing an alt attribute.
+22. Projects use <div> elements instead of <article> elements.
+23. No link or call-to-action on project items to help convert vistors to clients.
+
+CONTACT.HTML
+-------------
+24. The <input> element with the placeholder of "Email: has the wrong type.
+25. All the <input> elements are missing <label> elements.
+26. No required, minlength, or pattern validation attributes.
+27. Only 3 <input> elements while the project brief states there must be 5.
+28. The <button> element has no type="submit" attribute.
+29. The <form> element is missing the action and method attributes.
+
+CSS (styles.css)
+-----------------
+30. There was no css folder in the starter code even though listed in project brief.
+31. There was no style.css in the starter code even though listed in project brief.
+32. All the elements are therefore unstyled.
+33. The starter CSS uses only 2-3 selector types, while the brief requires a minimum of 5.
+34. No pseudo-classes are used (e.g :hover, :focus) anywhere in the starter CSS.
+35. No combination or descendant selectors are used.
+36. The .hero section uses lightblue as a background with no contrast check, causing a color contrast accessibility failure.
+37. The footer uses text-align:left instead of text-align:center.
+38. The font-family: Arial is declared without a fallback font.
+39. No table styling is present in the stylesheet.
+40. No form styling is present in the stylesheet.
+
+
+images (folder)
+----------------
+41. There was no images folder in the starter code even though listed in the project brief.
+42. No images are provided.
+
+
+

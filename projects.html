@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Website portfolio template - Portfolio of web development and design projects by Raphael Davids"
+    />
+    <meta name="author" content="Raphael Davids" />
+
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="Raphael Davids | Projects" />
+    <meta
+      property="og:description"
+      content="Selected web development and design work by Raphael Davids"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Title and style links -->
+    <title>Projects | Raphael Davids</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- These divs are used only for background animation styling of orbs, only three are used to keep inline with the assignment requirements  -->
+    <div class="orb-container" aria-hidden="true">
+      <div class="orb" aria-hidden="true"></div>
+      <div class="orb" aria-hidden="true"></div>
+      <div class="orb" aria-hidden="true"></div>
+    </div>
+    <header>
+      <nav aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <!-- prettier-ignore -->
+          <li>
+            <a href="./projects.html" class="active" aria-current="page">Projects</a>
+          </li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <h1>My Projects</h1>
+    </header>
+    <main>
+      <section class="projects">
+        <article class="project-card glass">
+          <h2 class="static">Project 1</h2>
+          <h2 class="hovered">mymedpage.com</h2>
+          <img
+            src="images/medical-website.png"
+            alt="an image of my medical website"
+          />
+          <p>A responsive website built with HTML and CSS.</p>
+        </article>
+
+        <article class="project-card glass">
+          <h2 class="static">Project 2</h2>
+          <h2 class="hovered">myonlinestore.com</h2>
+          <img
+            src="images/e-commerce.png"
+            alt="an image of my ecommerce website"
+          />
+          <p>An e-commerce site with modern design.</p>
+        </article>
+
+        <article class="project-card glass">
+          <h2 class="static">Project 3</h2>
+          <h2 class="hovered">myblogsite.com</h2>
+          <img
+            src="images/blog-website.png"
+            alt="an image of my blog website"
+          />
+          <p>A blog site with modern design.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Raphael Davids &copy; 2026 - Umuzi Capstone Project</p>
+      <!-- Prettier ignore -->
+      <a href="mailto:raphael.davids@umuzi.org">
+        Contact me at raphael.davids@umuzi.org
+      </a>
+      <img src="./images/signature.png" alt="A signature of Raphael Davids" />
+    </footer>
+  </body>
+</html>
