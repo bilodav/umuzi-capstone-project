@@ -63,12 +63,11 @@ I defined custom CSS properties in `:root` for colors, fonts, gradients, and gla
 - Added `lang="en"` to all HTML elements for screen reader language detection.
 - All images include descriptive `alt` text.
 - All form inputs have associated `<label>` elements.
-- I added `aria-required="true"` to all required form fields.
 - I added `aria-label="Main navigation"` to all `<nav>` elements.
 - I added `aria-current="page"` to the active navigation link on each active page.
-- I added `role="list"` to the `<ul>` elements of the navigation bar.
 - `aria-hidden="true"` is added to all the decorative elements.
 - The required field markers are hidden from screen reader also using the `aria-hidden="true"`.
+- I added `aria-live="polite` and `aria-atomic="true"` to the form feedback paragrapg so that screen readers announce success and error messages without interupting the user.
 
 ## How to view locally
 
@@ -108,6 +107,34 @@ I defined custom CSS properties in `:root` for colors, fonts, gradients, and gla
 ### Navigation Hover State
 
 ![Navigation](./screenshots/navigation.png)
+
+### Before and After Comparison of contact.html
+
+#### Before
+
+![Previous Contacts Page](./screenshots/previouscontactpage.png)
+
+#### After
+
+![Contacts Page](./screenshots/contactpage.png)
+
+### Validation Screenshots
+
+#### Contrast Validation Check for Link hover state vs Background Result
+
+![Contrast Validation Check 1](./screenshots/contrastcheck1.png)
+
+#### Contrast Validation Check for Focus state vs Background Result
+
+![Contrast Validation Check 2](./screenshots/contrastcheck2.png)
+
+#### HTML Validation Check Result
+
+![HTML Validation Check](./screenshots/htmlvalidation.png)
+
+#### CSS Validation Check Result
+
+![CSS Validation Check](./screenshots/cssvalidation.png)
 
 ## Reflection
 

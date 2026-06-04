@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- These divs are used only for background animation styling of orbs, only three are used to keep inline with the assignment requirements  -->
     <div class="orb-container" aria-hidden="true">
       <div class="orb" aria-hidden="true"></div>
@@ -44,12 +46,12 @@
       </nav>
       <h1>Contact Me</h1>
     </header>
-    <main>
+    <main id="main-content">
       <section class="contact glass">
         <h2>Get In Touch</h2>
 
         <form action="#" method="get">
-          <!-- * required mark hidden from screen readers -->
+          <!-- * required mark hidden for screen readers -->
           <label for="name">
             Name:
             <span aria-hidden="true" class="required-mark" title="required"
@@ -62,7 +64,9 @@
             name="name"
             placeholder="John Doe"
             required
+            pattern="[A-Za-z\s\-']{2,}"
             minlength="2"
+            title="Name can only contain letters, spaces, hyphens and apostrophes"
           />
 
           <label for="email">
@@ -75,8 +79,9 @@
             type="email"
             id="email"
             name="email"
-            placeholder="email@email.com"
+            placeholder="example@email.com"
             required
+            title="Enter a valid email address e.g example@email.com"
           />
 
           <label for="phone"> Phone: </label>
@@ -85,6 +90,8 @@
             type="tel"
             id="phone"
             placeholder="+27 82 000 000"
+            pattern="(\+27|0)[6-8][0-9]{8}"
+            title="Please enter a valid South African number e.g 0821234567 or +27821234567"
           />
 
           <label for="project-type">
@@ -110,6 +117,12 @@
             name="message"
           >
           </textarea>
+          <p
+            id="form-feedback"
+            aria-live="polite"
+            aria-atomic="true"
+            class="form-feedback"
+          ></p>
           <button type="submit">Send</button>
         </form>
 
@@ -123,7 +136,7 @@
           <ul>
             <li>
               <a href="tel:+27603765429">
-                <span>
+                <span aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                     <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                     <path
@@ -137,7 +150,7 @@
             <li>
               <!-- Prettier ignore -->
               <a href="mailto:raphael.davids@umuzi.org">
-                <span>
+                <span aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                     <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                     <path
@@ -149,8 +162,12 @@
               </a>
             </li>
             <li>
-              <a href="https://wa.me/27603765429" target="_blank">
-                <span>
+              <a
+                href="https://wa.me/27603765429"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                     <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                     <path
@@ -166,8 +183,9 @@
               <a
                 href="https://www.linkedin.com/in/bilo-raphael-davids-608995187/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                <span>
+                <span aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                     <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                     <path
@@ -179,8 +197,12 @@
               </a>
             </li>
             <li>
-              <a href="https://github.com/bilodav" target="_blank">
-                <span>
+              <a
+                href="https://github.com/bilodav"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                     <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                     <path
@@ -203,5 +225,33 @@
       </a>
       <img src="./images/signature.png" alt="A signature of Raphael Davids" />
     </footer>
+
+    <script>
+      const form = document.querySelector("form");
+      const feedback = document.getElementById("form-feedback");
+
+      // Listen for the submit event on the form
+      form.addEventListener("submit", (e) => {
+        // Prevent the default behaviour of the form submitting and reloading
+        e.preventDefault();
+
+        // Get all the values and store in the variables
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const projectType = document.getElementById("project-type").value;
+
+        // Check if all fields are currently filled out, it is also already handled by the required attributes but good to still ensure it has been filled out.
+        if (!name || !email || !projectType) {
+          feedback.textContent = "Please fill in all required fields";
+          feedback.style.color = "red";
+          return;
+        }
+
+        // If all fields are present then return the success message and reset the form
+        feedback.textContent = "Message has been sent successfully!";
+        feedback.style.color = "green";
+        form.reset();
+      });
+    </script>
   </body>
 </html>

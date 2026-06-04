@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- These divs are used only for background animation styling of orbs, only three are used to keep inline with the assignment requirements  -->
     <div class="orb-container" aria-hidden="true">
       <div class="orb" aria-hidden="true"></div>
@@ -43,36 +45,50 @@
       </nav>
       <h1>My Projects</h1>
     </header>
-    <main>
+    <main id="main-content">
       <section class="projects">
         <article class="project-card glass">
-          <h2 class="static">Project 1</h2>
-          <h2 class="hovered">mymedpage.com</h2>
-          <img
-            src="images/medical-website.png"
-            alt="an image of my medical website"
-          />
-          <p>A responsive website built with HTML and CSS.</p>
+          <h2 aria-label="Project 1 - mymedpage.com">
+            <span class="static">Project 1</span>
+            <span class="hovered">mymedpage.com</span>
+          </h2>
+          <figure>
+            <img
+              src="images/medical-website.png"
+              alt="an image of my medical website"
+            />
+            <figcaption>
+              A responsive website built with HTML and CSS.
+            </figcaption>
+          </figure>
         </article>
 
         <article class="project-card glass">
-          <h2 class="static">Project 2</h2>
-          <h2 class="hovered">myonlinestore.com</h2>
-          <img
-            src="images/e-commerce.png"
-            alt="an image of my ecommerce website"
-          />
-          <p>An e-commerce site with modern design.</p>
+          <h2 aria-label="Project 2 - myonlinestore.com">
+            <span class="static">Project 2</span>
+            <span class="hovered">myonlinestore.com</span>
+          </h2>
+          <figure>
+            <img
+              src="images/e-commerce.png"
+              alt="an image of my ecommerce website"
+            />
+            <figcaption>An e-commerce site with modern design.</figcaption>
+          </figure>
         </article>
 
         <article class="project-card glass">
-          <h2 class="static">Project 3</h2>
-          <h2 class="hovered">myblogsite.com</h2>
-          <img
-            src="images/blog-website.png"
-            alt="an image of my blog website"
-          />
-          <p>A blog site with modern design.</p>
+          <h2 aria-label="Project 3 - myblogsite.com">
+            <span class="static">Project 3</span>
+            <span class="hovered">myblogsite.com</span>
+          </h2>
+          <figure>
+            <img
+              src="images/blog-website.png"
+              alt="an image of my blog website"
+            />
+            <figcaption>A blog site with modern design.</figcaption>
+          </figure>
         </article>
       </section>
     </main>

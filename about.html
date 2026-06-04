@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- These divs are used only for background animation styling of orbs, only three are used to keep inline with the assignment requirements  -->
     <div class="orb-container" aria-hidden="true">
       <div class="orb" aria-hidden="true"></div>
       <div class="orb" aria-hidden="true"></div>
@@ -41,7 +43,7 @@
       </nav>
       <h1>About Me</h1>
     </header>
-    <main>
+    <main id="main-content">
       <section class="about-main glass">
         <h2>My Background</h2>
         <p>
@@ -64,11 +66,13 @@
       </section>
 
       <section class="about-skills glass">
-        <h2>Skills and Experience</h2>
         <table id="table">
+          <caption>
+            Skills and Experience of Raphael Davids
+          </caption>
           <thead>
             <tr>
-              <th colspan="5">My Skills</th>
+              <th colspan="5" scope="colgroup">My Skills</th>
             </tr>
           </thead>
           <tbody>
@@ -85,6 +89,7 @@
                     class="icon-hovered"
                     src="./images/html5-icon-hovered.svg"
                     alt="Colored HTML5 logo"
+                    aria-hidden="true"
                   />
                 </div>
               </td>
@@ -100,6 +105,7 @@
                     class="icon-hovered"
                     src="./images/css3-icon-hovered.svg"
                     alt="Colored CSS3 logo"
+                    aria-hidden="true"
                   />
                 </div>
               </td>
@@ -115,6 +121,7 @@
                     class="icon-hovered"
                     src="./images/js-icon-hovered.svg"
                     alt="Colored JavaScript logo"
+                    aria-hidden="true"
                   />
                 </div>
               </td>
@@ -130,6 +137,7 @@
                     class="icon-hovered"
                     src="./images/react-icon-hovered.svg"
                     alt="Colored React logo"
+                    aria-hidden="true"
                   />
                 </div>
               </td>
@@ -145,6 +153,7 @@
                     class="icon-hovered"
                     src="./images/python-icon-hovered.svg"
                     alt="Colored Python logo"
+                    aria-hidden="true"
                   />
                 </div>
               </td>
@@ -158,7 +167,7 @@
               </td>
             </tr>
             <tr>
-              <th colspan="5">My Experience</th>
+              <th colspan="5" scope="colgroup">My Experience</th>
             </tr>
             <tr>
               <td class="table-card">
@@ -173,6 +182,7 @@
                     class="icon-hovered"
                     src="./images/microsoft-icon-hovered.svg"
                     alt="Colored Microsoft logo"
+                    aria-hidden="true"
                   />
                 </div>
               </td>
@@ -188,6 +198,7 @@
                     class="icon-hovered"
                     src="./images/paypal-icon-hovered.svg"
                     alt="Colored PayPal logo"
+                    aria-hidden="true"
                   />
                 </div>
               </td>
@@ -203,6 +214,7 @@
                     class="icon-hovered"
                     src="./images/amazon-icon-hovered.svg"
                     alt="Colored Amazon logo"
+                    aria-hidden="true"
                   />
                 </div>
               </td>
@@ -218,6 +230,7 @@
                     class="icon-hovered"
                     src="./images/reddit-icon-hovered.svg"
                     alt="Colored Reddit logo"
+                    aria-hidden="true"
                   />
                 </div>
               </td>
@@ -233,6 +246,7 @@
                     class="icon-hovered"
                     src="./images/google-icon-hovered.svg"
                     alt="Colored Google logo"
+                    aria-hidden="true"
                   />
                 </div>
               </td>
