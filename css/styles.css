@@ -95,6 +95,7 @@ body {
   width: 10vh;
   height: 10vh;
   border-radius: 50%;
+  z-index: -5000;
   background: radial-gradient(circle, #00c9ff 0%, #00c9ff 60%, transparent 90%);
   box-shadow:
     0 0 20px 20px #00c9ff,
@@ -105,36 +106,23 @@ body {
   animation: orb-mover-1 35s alternate-reverse linear infinite;
 }
 
-.orb:nth-of-type(1) {
-  width: 10vh;
-  height: 10vh;
-  border-radius: 50%;
-  z-index: -5000;
+.orb:nth-of-type(1),
+.orb:nth-of-type(2) {
   background: radial-gradient(circle, #e5b421 0%, #e5b421 60%, transparent 90%);
   box-shadow:
     0 0 20px 20px #e5b421,
     0 0 60px 40px #e5b421,
     0 0 100px 60px #ffc109;
-
   filter: blur(6px);
+}
+
+.orb:nth-of-type(1) {
   animation: orb-mover-2 60s alternate-reverse linear infinite;
 }
 
 .orb:nth-of-type(2) {
-  width: 10vh;
-  height: 10vh;
-  border-radius: 50%;
-  z-index: -5000;
-  background: radial-gradient(circle, #e5b421 0%, #e5b421 60%, transparent 90%);
-  box-shadow:
-    0 0 20px 20px #e5b421,
-    0 0 60px 40px #e5b421,
-    0 0 100px 60px #ffc109;
-
-  filter: blur(6px);
   animation: orb-mover-3 30s alternate-reverse linear infinite;
 }
-
 @keyframes orb-mover-1 {
   0% {
     translate: 10vw 5vh;
@@ -520,9 +508,6 @@ p {
 
   #table {
     display: block;
-  }
-
-  #table {
     margin: 50px auto;
     table-layout: fixed;
     width: 80%;
@@ -707,18 +692,14 @@ p {
 /* Position absolute used so that the .hovered element can occupy the same space in the document flow as .static for the transition effect */
 
 .project-card:hover .static {
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
   transition: all 250ms ease-in-out;
 }
+
 .project-card:hover .hovered {
   opacity: 1;
   visibility: visible;
-}
-
-.project-card:hover .static {
-  opacity: 0;
-  visibility: hidden;
 }
 
 .project-card figure {

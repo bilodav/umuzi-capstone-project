@@ -26,7 +26,7 @@ I have found that the starter codebase contained 42 identified errors. Some key 
 - All four of the HTML files were missing `lang="en"`, `charset`, `viewport`, and `description` meta tags.
 - All structural elements used `<div>` instead of semantic HTML5 elements.
 - No navigation bar existed on any page.
-- No `aria-label`, `aria-current`, or `role` attributes were used anywhere.
+- No `aria-label` or `aria-current` attributes were used anywhere.
 - All images were missing `alt` attributes.
 - The contact form had only 3 inputs, no labels, no validation, and an incorrect `type="text"` on the email field instead of `type="email"`.
 - The about page was missing the skills table entirely.
@@ -40,7 +40,7 @@ Please see `design/issues-identified.txt` for the complete list of errors.
 
 - Added `lang="en"`, all required meta tags, and Open Graph tags to all four pages.
 - Replaced all `<div>` structural elements with correct semantic elements. I used `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>` and `<address>`.
-- I built a navigation bar across all four pages with `aria-label`, `aria-current="page"`, and `role="list"` for accessibility.
+- I built a navigation bar across all four pages with `aria-label` and `aria-current="page"` for accessibility.
 - I added descriptive `alt` text to all images.
 - Built the missing skills and experience table on the about page using proper table elements with proper structure.
 - Added a third project card to the projects page using the semantic `<article>` element.
